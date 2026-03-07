@@ -1,0 +1,81 @@
+<div class="assets-page">
+
+    <div class="nav">
+        <div class="brand">
+            <div class="logo">匯</div>
+            <span class="title">資訊資產管理系統</span>
+        </div>
+
+        <ul class="menu">
+            <li class="item">
+                <a href="#" class="link">🏠</a>
+            </li>
+            <li class="item">
+                <a href="#" class="link">
+                    <span>數位儀錶板</span>
+                </a>
+            </li>
+            <li class="item active">
+                <a href="#" class="link">資產清冊</a>
+            </li>
+
+            <li class="item">
+                <a href="#" class="link">軟硬體管理</a>
+            </li>
+
+            <li class="item">
+                <a href="#" class="link">線上服務</a>
+            </li>
+
+            <li class="item">
+                <a href="#" class="link">統計管理</a>
+            </li>
+
+            <li class="item">
+                <a href="#" class="link">系統管理</a>
+            </li>
+
+            <li class="item menu-icon">
+                <a href="#" class="link">
+                    <span class="icon">☰</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="actions">
+            <button class="login-btn">登入</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="page-header">
+            <div class="icon">✎</div>
+            <h1>資訊資產清冊暨風險評鑑</h1>
+        </div>
+    </div>
+<div class="tabs">
+  <button
+    class="tab"
+    [class.active]="activeTab === 'assessment'"
+    (click)="activeTab = 'assessment'"
+  >
+    資產盤點與評鑑
+  </button>
+
+  <button
+    class="tab"
+    [class.active]="activeTab === 'manage'"
+    (click)="activeTab = 'manage'"
+  >
+    資產項目維護
+  </button>
+
+  <button
+    class="tab"
+    [class.active]="activeTab === 'recent'"
+    (click)="activeTab = 'recent'"
+  >
+    近期資產清冊
+  </button>
+</div>
+</div>
