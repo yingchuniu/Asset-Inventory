@@ -1,296 +1,302 @@
 .assets-page {
-  min-height: 100vh;
-  background: #efefef;
-  font-family: Arial, "Microsoft JhengHei", sans-serif;
+    min-height: 100vh;
+    background: #efefef;
+    font-family: Arial, "Microsoft JhengHei", sans-serif;
 }
 
 // nav
 
 .nav {
-  height: 38px;
-  background: #c70d2c;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 6px;
-
-  .brand {
+    height: 38px;
+    background: #c70d2c;
+    color: #fff;
     display: flex;
     align-items: center;
-    min-width: 210px;
-    background-color: #ffff;
+    justify-content: space-between;
+    padding: 0 6px;
 
-    .logo {
-      width: 28px;
-      height: 28px;
-      border: 2px solid #fff;
-      border-radius: 2px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      font-weight: 700;
-      margin-right: 8px;
-    }
-
-    .title {
-      font-size: 14px;
-      font-weight: 500;
-      white-space: nowrap;
-      color: black;
-    }
-  }
-
-  .menu {
-    list-style: none;
-    display: flex;
-    align-items: stretch;
-    margin: 0;
-    padding: 0;
-    flex: 1;
-    margin-left: 12px;
-
-    .item {
-      display: flex;
-      align-items: stretch;
-
-      .link {
-        color: #fff;
-        text-decoration: none;
-        font-size: 14px;
-        padding: 0 18px;
-        height: 38px;
+    .brand {
         display: flex;
         align-items: center;
-        gap: 6px;
-      }
+        min-width: 210px;
+        background-color: #ffff;
 
-      &:hover .link {
-        background: rgba(255, 255, 255, 0.08);
-      }
+        .logo {
+            width: 28px;
+            height: 28px;
+            border: 2px solid #fff;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            margin-right: 8px;
+        }
 
-      &.active .link {
-        border: 2px solid #fff;
-        border-radius: 8px ;
-        height: 34px;
-        margin: 4px 0;
-        background: rgba(255, 255, 255, 0.06);
-      }
-
-      &.menu-icon .link {
-        padding: 0 12px;
-        font-size: 18px;
-      }
+        .title {
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+            color: black;
+        }
     }
-  }
 
-  .actions {
-    margin-left: 12px;
-    display: flex;
-    align-items: center;
+    .menu {
+        list-style: none;
+        display: flex;
+        align-items: stretch;
+        margin: 0;
+        padding: 0;
+        flex: 1;
+        margin-left: 12px;
 
-    .login-btn {
-      height: 28px;
-      min-width: 52px;
-      border: 1px solid #999;
-      border-radius: 6px;
-      background: #fff;
-      color: #333;
-      font-size: 14px;
-      cursor: pointer;
-      padding: 0 12px;
+        .item {
+            display: flex;
+            align-items: stretch;
 
-      &:hover {
-        background: #f3f3f3;
-      }
+            .link {
+                color: #fff;
+                text-decoration: none;
+                font-size: 14px;
+                padding: 0 18px;
+                height: 38px;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+
+            &:hover .link {
+                background: rgba(255, 255, 255, 0.08);
+            }
+
+            &.active .link {
+                border: 2px solid #fff;
+                border-radius: 8px;
+                height: 34px;
+                margin: 4px 0;
+                background: rgba(255, 255, 255, 0.06);
+            }
+
+            &.menu-icon .link {
+                padding: 0 12px;
+                font-size: 18px;
+            }
+        }
     }
-  }
+
+    .actions {
+        margin-left: 12px;
+        display: flex;
+        align-items: center;
+
+        .login-btn {
+            height: 28px;
+            min-width: 52px;
+            border: 1px solid #999;
+            border-radius: 6px;
+            background: #fff;
+            color: #333;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 0 12px;
+
+            &:hover {
+                background: #f3f3f3;
+            }
+        }
+    }
 }
 
 // header
 
 .content {
-  padding: 12px 18px;
+    padding: 12px 18px;
 
-  .page-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    .page-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
 
-    .icon {
-      width: 28px;
-      height: 28px;
-      font-size: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        .icon {
+            width: 28px;
+            height: 28px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 18px;
+            margin: 0;
+            font-weight: 700;
+        }
     }
-
-    h1 {
-      font-size: 18px;
-      margin: 0;
-      font-weight: 700;
-    }
-  }
 }
+
 // tab
 .tabs {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  border-bottom: 1px solid #cfcfcf;
-  margin-bottom: 18px;
-  padding-left: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #cfcfcf;
+    margin-bottom: 18px;
+    padding-left: 8px;
 
-  .tab {
-    border: none;
-    background: transparent;
-    font-size: 14px;
-    color: #333;
-    padding: 10px 0 8px;
-    cursor: pointer;
-    position: relative;
+    .tab {
+        border: none;
+        background: transparent;
+        font-size: 14px;
+        color: #333;
+        padding: 10px 0 8px;
+        cursor: pointer;
+        position: relative;
 
-    &:hover {
-      color: #c70d2c;
+        &:hover {
+            color: #c70d2c;
+        }
+
+        &.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -1px;
+            height: 2px;
+            background: #c70d2c;
+        }
     }
-
-    &.active::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -1px;
-      height: 2px;
-      background: #c70d2c;
-    }
-  }
 }
 
 // tab-Panel
 .tab-panel {
-  padding: 8px 0 0;
+    padding: 8px 0 0;
 }
 
 .toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  gap: 12px;
-
-  .toolbar-left {
     display: flex;
     align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    gap: 12px;
 
-    label {
-      font-size: 14px;
-      color: #333;
+    .toolbar-left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+
+        label {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .year-select {
+            width: 120px;
+            height: 30px;
+            border: 1px solid #bfbfbf;
+            background: #fff;
+            padding: 0 8px;
+            font-size: 14px;
+        }
+
+        .gray-btn,
+        .red-btn {
+            height: 30px;
+            border: none;
+            padding: 0 14px;
+            font-size: 13px;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .gray-btn {
+            background: #7f7f7f;
+
+            &:hover {
+                background: #6d6d6d;
+            }
+        }
+
+        .red-btn {
+            background: #c70d2c;
+
+            &:hover {
+                background: #ae0b25;
+            }
+        }
     }
 
-    .year-select {
-      width: 120px;
-      height: 30px;
-      border: 1px solid #bfbfbf;
-      background: #fff;
-      padding: 0 8px;
-      font-size: 14px;
-    }
+   
+    
+}
+.toolbar-right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 
-    .gray-btn,
-    .red-btn {
-      height: 30px;
-      border: none;
-      padding: 0 14px;
-      font-size: 13px;
-      color: #fff;
-      cursor: pointer;
-      border-radius: 2px;
-    }
+  .add-btn {
+    border: none;
+    background: transparent;
+    font-size: 13px;
+    color: #222;
+    cursor: pointer;
 
-    .gray-btn {
-      background: #7f7f7f;
-
-      &:hover {
-        background: #6d6d6d;
-      }
-    }
-
-    .red-btn {
-      background: #c70d2c;
-
-      &:hover {
-        background: #ae0b25;
-      }
-    }
-  }
-
-  .toolbar-right {
-    .add-btn {
-      border: none;
-      background: transparent;
-      font-size: 13px;
-      color: #222;
-      cursor: pointer;
-
-      &:hover {
-        color: #c70d2c;
-      }
+    &:hover {
+      color: #c70d2c;
     }
   }
 }
-
 .table-wrap {
-  overflow-x: auto;
+    overflow-x: auto;
 }
 
 .asset-table {
-  width: 100%;
-  min-width: 1280px;
-  border-collapse: collapse;
-  font-size: 13px;
-  color: #222;
+    width: 100%;
+    min-width: 1280px;
+    border-collapse: collapse;
+    font-size: 13px;
+    color: #222;
 
-  th,
-  td {
-    border: 1px solid #f3f3f3;
-    padding: 8px 10px;
-    text-align: center;
-    vertical-align: middle;
-  }
-
-  thead th {
-    background: #d8d3d3;
-    font-weight: 700;
-    white-space: nowrap;
-  }
-
-  tbody td {
-    background: #e9e9e9;
-  }
-
-  tbody tr:hover td {
-    background: #e0e0e0;
-  }
-
-  td:nth-child(3),
-  td:nth-child(9),
-  td:nth-child(10) {
-    text-align: left;
-  }
-
-  .icon-btn {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    font-size: 15px;
-    margin: 0 2px;
-
-    &:hover {
-      opacity: 0.7;
+    th,
+    td {
+        border: 1px solid #f3f3f3;
+        padding: 8px 10px;
+        text-align: center;
+        vertical-align: middle;
     }
-  }
+
+    thead th {
+        background: #d8d3d3;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    tbody td {
+        background: #e9e9e9;
+    }
+
+    tbody tr:hover td {
+        background: #e0e0e0;
+    }
+
+    td:nth-child(3),
+    td:nth-child(9),
+    td:nth-child(10) {
+        text-align: left;
+    }
+
+    .icon-btn {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font-size: 15px;
+        margin: 0 2px;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
 }
