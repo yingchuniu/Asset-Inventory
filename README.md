@@ -1,4 +1,4 @@
-# 資訊資產管理系統
+<img width="1505" height="803" alt="截圖 2026-03-12 晚上10 57 35" src="https://github.com/user-attachments/assets/24115fc1-852d-442b-85e3-a0604d83454f" /># 資訊資產管理系統
 
 系統採前後端分離架構
 
@@ -256,3 +256,14 @@ http://localhost:4200
 
 Backend API
 http://localhost:3000
+
+# 截圖
+<img width="1505" height="803" alt="截圖 2026-03-12 晚上10 57 35" src="https://github.com/user-attachments/assets/189ff98b-1590-4750-b786-b65a5377e4eb" />
+
+
+<img width="1511" height="780" alt="截圖 2026-03-12 晚上10 57 12" src="https://github.com/user-attachments/assets/8d415764-7f78-43c3-bd80-b5487531d727" />
+
+
+
+
+
