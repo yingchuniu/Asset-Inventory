@@ -1,0 +1,164 @@
+<form class="asset-form" [formGroup]="insertForm">
+
+    <!-- header -->
+    <div class="form-header">
+        資產盤點與評鑑-編輯
+        <span class="code">{{EditModel?.asset_code}}</span>
+    </div>
+
+    <!-- 資產價值 -->
+    <div class="section">
+
+        <div class="section-left">
+            資產價值
+        </div>
+
+        <div class="section-right">
+
+            <div class="asset-grid">
+
+                <label>機密性(C)</label>
+                <select formControlName="confidentiality">
+                    <option [value]="1">1</option>
+                    <option [value]="2">2</option>
+                    <option [value]="3">3</option>
+                    <option [value]="4">4</option>
+                    <option [value]="5">5</option>
+                </select>
+
+                <label>完整性(I)</label>
+                <select formControlName="integrity">
+                    <option [value]="1">1</option>
+                    <option [value]="2">2</option>
+                    <option [value]="3">3</option>
+                    <option [value]="4">4</option>
+                    <option [value]="5">5</option>
+                </select>
+
+                <label>可用性(A)</label>
+                <select formControlName="availability">
+                    <option [value]="1">1</option>
+                    <option [value]="2">2</option>
+                    <option [value]="3">3</option>
+                    <option [value]="4">4</option>
+                    <option [value]="5">5</option>
+                </select>
+
+                <label>價值</label>
+                <input formControlName="asset_value" readonly>
+
+                <label>價值等級</label>
+                <input formControlName="asset_level" readonly>
+                <label>機密等級</label>
+                <input formControlName="security_level" readonly>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 風險評鑑 -->
+    <div class="section">
+        <div class="section-left">
+
+        </div>
+
+        <div class="section-right">
+
+            <div class="risk-grid">
+                <label>風險擁有者</label>
+                <input formControlName="owner">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+
+        <div class="section-left">
+            風險評鑑
+        </div>
+
+        <div class="section-right">
+
+            @for (risk of risks; track risk.id) {
+
+            <div class="risk-box">
+
+                <div class="risk-grid">
+
+                    <label>威脅{{risk.risk_no}}</label>
+                    <select [value]="risk.threat" (change)="risk.threat = $any($event.target).value">
+                        <option value="資料外洩">資料外洩</option>
+                        <option value="資料竄改">資料竄改</option>
+                        <option value="未授權查詢">未授權查詢</option>
+                        <option value="未授權存取">未授權存取</option>
+                    </select>
+
+                    <label>脆弱點{{risk.risk_no}}</label>
+                    <select [value]="risk.vulnerability" (change)="risk.vulnerability = $any($event.target).value">
+                        <option value="權限檢查不足">權限檢查不足</option>
+                        <option value="備份驗證不足">備份驗證不足</option>
+                        <option value="帳號管理不當">帳號管理不當</option>
+                        <option value="權限控管不足">權限控管不足</option>
+                    </select>
+
+                    <label>威脅說明</label>
+                    <input type="text" [value]="risk.description"
+                        (input)="risk.description = $any($event.target).value">
+
+                </div>
+
+                <div class="cia-row">
+                    <label [for]="'c-' + risk.id">C</label>
+                    <input [id]="'c-' + risk.id" type="checkbox" [checked]="+risk.c_impact === 1"
+                        (change)="onImpactChange(risk, 'c_impact', $event)">
+
+                    <label [for]="'i-' + risk.id">I</label>
+                    <input [id]="'i-' + risk.id" type="checkbox" [checked]="+risk.i_impact === 1"
+                        (change)="onImpactChange(risk, 'i_impact', $event)">
+
+                    <label [for]="'a-' + risk.id">A</label>
+                    <input [id]="'a-' + risk.id" type="checkbox" [checked]="+risk.a_impact === 1"
+                        (change)="onImpactChange(risk, 'a_impact', $event)">
+                </div>
+
+                <div class="risk-grid">
+
+                    <label>衝擊程度</label>
+                    <select [value]="risk.impact_level" (change)="onRiskFieldChange(risk, 'impact_level', $event)">
+                        <option [value]="1">1</option>
+                        <option [value]="2">2</option>
+                    </select>
+
+                    <label>可能性</label>
+                    <select [value]="risk.likelihood" (change)="onRiskFieldChange(risk, 'likelihood', $event)">
+                        <option [value]="1">1</option>
+                        <option [value]="2">2</option>
+                    </select>
+
+                    <label>風險值</label>
+                    <div class="risk-score">
+                        {{ risk.risk_value }}
+                    </div>
+
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+
+
+
+
+    </div>
+
+    <!-- footer -->
+
+    <div class="form-footer">
+        <button class="btn-confirm" (click)="onSubmit()">確定</button>
+        <button class="btn-cancel" (click)="activeModal.dismiss()">取消</button>
+    </div>
+
+</form>

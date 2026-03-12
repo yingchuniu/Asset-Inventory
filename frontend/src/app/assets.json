@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "assetCode": "I-001",
+    "category": "資訊資產",
+    "assetName": "計畫管理系統資料庫",
+    "confidentiality": 5,
+    "integrity": 5,
+    "availability": 5,
+    "assetValue": 15,
+    "assetLevel": 5,
+    "threat": "對資訊的未授權存取",
+    "vulnerability": "未定期檢查使用者權限",
+    "riskValue": 4,
+    "owner": "陳正忠"
+  },
+  {
+    "id": 2,
+    "assetCode": "I-002",
+    "category": "資訊資產",
+    "assetName": "計畫管理系統資料庫1",
+    "confidentiality": 5,
+    "integrity": 4,
+    "availability": 3,
+    "assetValue": 12,
+    "assetLevel": 4,
+    "threat": "社交工程攻擊",
+    "vulnerability": "資訊安全意識不足",
+    "riskValue": 8,
+    "owner": "陳正忠"
+  },
+  {
+    "id": 3,
+    "assetCode": "V-001",
+    "category": "服務資產",
+    "assetName": "中華電信",
+    "confidentiality": 2,
+    "integrity": 2,
+    "availability": 3,
+    "assetValue": 7,
+    "assetLevel": 2,
+    "threat": "服務中斷",
+    "vulnerability": "服務品質不佳",
+    "riskValue": 4,
+    "owner": "陳正忠"
+  }
+]

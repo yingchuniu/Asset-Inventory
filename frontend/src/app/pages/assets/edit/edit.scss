@@ -1,0 +1,306 @@
+.asset-form {
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+  background: #f4f4f4;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  font-weight: 700;
+  font-size: 20px;
+  border-bottom: 3px solid #a91d2b;
+  background: #f7f7f7;
+  flex-wrap: wrap;
+
+  .code {
+    font-size: 16px;
+    font-weight: 600;
+    color: #9e9e9e;
+    // word-break: break-all;
+  }
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  border: 1px solid #d7d0cc;
+  border-top: none;
+  background: #efe7e3;
+  min-width: 0;
+}
+
+.section-left {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 14px 8px;
+  border-right: 1px solid #d7d0cc;
+  background: #ece4df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-right {
+  padding: 8px 12px;
+  min-width: 0;
+}
+
+.asset-grid,
+.risk-grid {
+  display: grid;
+  grid-template-columns: auto minmax(90px, 110px) auto minmax(90px, 110px) auto minmax(120px, 1fr);
+  gap: 10px 12px;
+  align-items: center;
+  margin-bottom: 10px;
+  min-width: 0;
+}
+
+.asset-grid label,
+.risk-grid label,
+.cia-row label {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.asset-grid select,
+.risk-grid select,
+.asset-grid input,
+.risk-grid input {
+  width: 100%;
+  min-width: 0;
+  height: 32px;
+  padding: 4px 8px;
+  border: 1px solid #cfc7c2;
+  background: #fff;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.asset-grid input[readonly],
+.risk-grid input[readonly] {
+  background: #f5d98b;
+  border: none;
+  text-align: center;
+  font-weight: 700;
+}
+
+.cia-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 8px 0 12px;
+  padding: 6px 0;
+  flex-wrap: wrap;
+
+  input[type='checkbox'] {
+    width: 18px;
+    height: 18px;
+    accent-color: #888;
+    flex: 0 0 auto;
+  }
+}
+
+.risk-section {
+  border: 1px solid #d7d0cc;
+  background: #efe7e3;
+  padding: 0;
+}
+
+.risk-box {
+  padding: 12px;
+  border-bottom: 1px solid #d7d0cc;
+  background: #efe7e3;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.risk-score {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 32px;
+  padding: 0 10px;
+  background: #eb867d;
+  color: #7a1111;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding: 16px 12px 6px;
+  background: #f4f4f4;
+  flex-wrap: wrap;
+}
+
+.btn-confirm,
+.btn-cancel {
+  min-width: 68px;
+  height: 34px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 18px;
+}
+
+.btn-confirm {
+  background: #a70f2d;
+  color: #fff;
+}
+
+.btn-cancel {
+  background: #cfcfcf;
+  color: #333;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(169, 29, 43, 0.15);
+}
+
+/* -----------------------
+   平板以下
+------------------------ */
+@media (max-width: 992px) {
+  .asset-grid,
+  .risk-grid {
+    grid-template-columns: minmax(90px, 120px) 1fr minmax(90px, 120px) 1fr;
+  }
+
+  .asset-grid > label,
+  .risk-grid > label {
+    white-space: normal;
+  }
+}
+
+/* -----------------------
+   手機 / 小平板
+------------------------ */
+@media (max-width: 768px) {
+  .form-header {
+    font-size: 18px;
+    align-items: flex-start;
+
+    .code {
+      font-size: 14px;
+    }
+  }
+
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .section-left {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding: 10px 12px;
+    border-right: none;
+    border-bottom: 1px solid #d7d0cc;
+    justify-content: flex-start;
+  }
+
+  .section-right {
+    padding: 10px;
+  }
+
+  .asset-grid,
+  .risk-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .asset-grid label,
+  .risk-grid label {
+    margin-top: 4px;
+  }
+
+  .cia-row {
+    gap: 10px 12px;
+    padding: 8px 0;
+  }
+
+  .risk-box {
+    padding: 10px;
+  }
+
+  .form-footer {
+    gap: 10px;
+  }
+
+  .btn-confirm,
+  .btn-cancel {
+    flex: 1 1 140px;
+    min-width: 0;
+  }
+}
+
+/* -----------------------
+   極小手機
+------------------------ */
+@media (max-width: 480px) {
+  .asset-form {
+    font-size: 13px;
+  }
+
+  .form-header {
+    padding: 10px 12px;
+    font-size: 16px;
+
+    .code {
+      font-size: 13px;
+    }
+  }
+
+  .section-left {
+    font-size: 15px;
+    padding: 8px 10px;
+  }
+
+  .section-right {
+    padding: 8px;
+  }
+
+  .asset-grid select,
+  .risk-grid select,
+  .asset-grid input,
+  .risk-grid input {
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .risk-score {
+    min-height: 36px;
+  }
+
+  .btn-confirm,
+  .btn-cancel {
+    height: 38px;
+    font-size: 13px;
+  }
+}

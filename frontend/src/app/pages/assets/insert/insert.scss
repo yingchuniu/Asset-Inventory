@@ -1,0 +1,175 @@
+.asset-form {
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+  background: #f4f4f4;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  font-weight: 700;
+  font-size: 20px;
+  border-bottom: 3px solid #a91d2b;
+  background: #f7f7f7;
+
+  .code {
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+  }
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  border: 1px solid #d7d0cc;
+  border-top: none;
+  background: #efe7e3;
+}
+
+.section-left {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 14px 8px;
+  border-right: 1px solid #d7d0cc;
+  background: #ece4df;
+}
+
+.risk-section {
+  border: 1px solid #d7d0cc;
+  background: #efe7e3;
+}
+
+.risk-box {
+  padding: 12px;
+  border-bottom: 1px solid #d7d0cc;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.section-right {
+  padding: 8px 12px;
+  
+}
+
+.asset-grid,
+.risk-grid {
+  display: grid;
+  grid-template-columns: auto 110px auto 110px auto 1fr;
+  gap: 10px 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.asset-grid label,
+.risk-grid label,
+.cia-row label {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.asset-grid select,
+.risk-grid select,
+.asset-grid input,
+.risk-grid input {
+  height: 32px;
+  padding: 4px 8px;
+  border: 1px solid #cfc7c2;
+  background: #fff;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.asset-grid input[readonly],
+.risk-grid input[readonly] {
+  background: #f5d98b;
+  border: none;
+  text-align: center;
+  font-weight: 700;
+}
+
+.cia-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 8px 0 12px;
+  padding: 6px 0;
+
+  input[type='checkbox'] {
+    width: 18px;
+    height: 18px;
+    accent-color: #888;
+  }
+}
+
+.risk-section {
+  border: 1px solid #d7d0cc;
+  background: #efe7e3;
+  padding: 0;
+}
+
+.risk-box {
+  padding: 12px;
+  border-bottom: 1px solid #d7d0cc;
+  background: #efe7e3;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.risk-score {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 64px;
+  height: 32px;
+  background: #eb867d;
+  color: #7a1111;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding: 16px 0 6px;
+  background: #f4f4f4;
+}
+
+.btn-confirm,
+.btn-cancel {
+  min-width: 68px;
+  height: 34px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-confirm {
+  background: #a70f2d;
+  color: #fff;
+}
+
+.btn-cancel {
+  background: #cfcfcf;
+  color: #333;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(169, 29, 43, 0.15);
+}

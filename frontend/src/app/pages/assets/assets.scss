@@ -176,16 +176,14 @@
 
 .toolbar {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 12px;
-    gap: 12px;
+    flex-direction: column;
+    gap: 10px;
 
     .toolbar-left {
         display: flex;
         align-items: center;
         gap: 8px;
-        flex-wrap: wrap;
+
 
         label {
             font-size: 14px;
@@ -201,54 +199,80 @@
             font-size: 14px;
         }
 
-        .gray-btn,
-        .red-btn {
-            height: 30px;
-            border: none;
-            padding: 0 14px;
-            font-size: 13px;
-            color: #fff;
-            cursor: pointer;
-            border-radius: 2px;
-        }
 
-        .gray-btn {
-            background: #7f7f7f;
 
-            &:hover {
-                background: #6d6d6d;
-            }
-        }
-
-        .red-btn {
-            background: #c70d2c;
-
-            &:hover {
-                background: #ae0b25;
-            }
-        }
     }
 
-   
-    
-}
-.toolbar-right {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
+    .toolbar-search {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
 
-  .add-btn {
-    border: none;
-    background: transparent;
-    font-size: 13px;
-    color: #222;
-    cursor: pointer;
+    .search-input {
+        width: 350px;
+        height: 34px;
+        padding: 0 10px;
+        border: 1px solid #cfcfcf;
+        border-radius: 4px;
+    }
+}
+
+.asset-table th {
+  cursor: pointer;
+  user-select: none;
+}
+
+.asset-table th:hover {
+  background: #f2f2f2;
+}
+
+.toolbar-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    .add-btn {
+        border: none;
+        background: transparent;
+        font-size: 13px;
+        color: #222;
+        cursor: pointer;
+
+        &:hover {
+            color: #c70d2c;
+        }
+    }
+}
+
+.gray-btn {
+    background: #7f7f7f;
 
     &:hover {
-      color: #c70d2c;
+        background: #6d6d6d;
     }
-  }
 }
+
+.red-btn {
+    background: #c70d2c;
+
+    &:hover {
+        background: #ae0b25;
+    }
+}
+
+.gray-btn,
+.red-btn {
+    height: 30px;
+    border: none;
+    padding: 0 14px;
+    font-size: 13px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
 .table-wrap {
     overflow-x: auto;
 }
